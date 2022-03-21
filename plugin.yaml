@@ -1,0 +1,29 @@
+name: logging-app-cs-plugin
+description: Plugin para configurar o log em seu projeto.
+types:
+  - app
+inputs:
+  - label: Set Authentication Url
+    type: text
+    default: ""
+    name: url
+
+displayName: Authentication
+
+picture: "plugin.png"
+
+category: Backend
+
+compatibility:
+  - net5.0
+  - net6.0
+
+about: about.md
+
+usage: usage.md
+
+useCase: useCase.md
+
+implementation: implementation.md
+
+technologies: [".NET", "C#", "Api"]
