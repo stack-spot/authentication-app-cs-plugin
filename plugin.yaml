@@ -1,12 +1,12 @@
-name: logging-app-cs-plugin
-description: Plugin para configurar o log em seu projeto.
+name: authentication-app-cs-plugin
+description: Plugin para configurar a autenticação em seu projeto.
 types:
   - app
 inputs:
   - label: Set Authentication Url
     type: text
-    default: ""
     name: url
+    default: ""
 
 displayName: Authentication
 
