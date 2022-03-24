@@ -11,13 +11,23 @@ Adicione ao seu `IServiceCollection` via `services.AddTokenAuthentication()` no 
 ```csharp
 services.AddTokenAuthentication(url);
 ```
+> Caso encontre o erro *`System.ArgumentOutOfRangeException: Valid values are between -62135596800 and 253402300799, inclusive. (Parameter 'seconds')`* utilize a sobrecarga do serviço definindo o parametro `ConvertExpirationMillisecondsToSeconds` como `true`.  
+Isso ocorre somente em casos muito específicos.
+
+```csharp
+services.AddTokenAuthentication(serverAuthenticatonUrl,
+                                new HttpClientHandlerOptions()
+                                {
+                                    ConvertExpirationMillisecondsToSeconds = true
+                                });
+```
 
 ### Configurações Adicionais
 
 *  Definir o `[Authorize]` para suas `Controllers` e/ou `Endpoints`. 
 
 ```csharp
-[Auhtorize]
+[Authorize]
 public class MyController : ControllerBase
 {
     ...
