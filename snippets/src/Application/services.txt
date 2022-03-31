@@ -1,0 +1,3 @@
+string url = configuration.GetSection("Authentication:Url").Value;
+services.AddDistributedMemoryCache();
+services.AddTokenAuthentication(url);

@@ -8,6 +8,43 @@ inputs:
     name: url
     default: ""
 
+hooks:
+#package
+  - type: run
+    trigger: before-render
+    working-dir: src/{{project_name}}.Application
+    commands:
+      - dotnet add package StackSpot.Authentication
+#dependencyinjection
+  - type: edit
+    trigger: before-render
+    path: "src/{{project_name}}.Application/Common/StackSpot/DependencyInjection.cs"
+    changes:
+      - search:
+          string: "using"
+          insert-before:
+            value: "using StackSpot.Authentication;"
+          when:
+            not-exists: "using StackSpot.Authentication;"
+      - search:
+          string: "return services"
+          insert-before:
+            snippet: snippets/src/Application/services.txt
+          when:
+            not-exists: "services.AddTokenAuthentication(url);"
+      - search:
+          string: "return app"
+          insert-before:
+            snippet: snippets/src/Application/app.txt
+          when:
+            not-exists: "app.UseAuthentication();"
+#format
+  - type: run
+    trigger: after-render
+    working-dir: src/{{project_name}}.Application
+    commands:
+      -  dotnet dotnet-format --include-generated
+
 displayName: Authentication
 
 picture: "plugin.png"
