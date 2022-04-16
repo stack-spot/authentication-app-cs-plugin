@@ -19,7 +19,7 @@ Para utilizar esse plugin é necessário ter uma stack dotnet criada pelo cli do
 
 Ter instalado:
 - .NET 5 ou 6 
-- O template base de `rest-app-cs-template` já deverá estar aplicado para você conseguir utilizar este plugin. 
+- O template `rest-app-cs-template` ou o `worker-app-cs-template` já deverá estar aplicado para você conseguir utilizar este plugin.
 
 ### **Instalação**
 Para fazer o download do **authentication-app-cs-plugin**, siga os passos abaixo:
