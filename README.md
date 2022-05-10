@@ -10,21 +10,22 @@
 ## **Visão Geral**
 ### **authentication-app-cs-plugin**
 
-O **authentication-app-cs-plugin** adiciona em uma stack a capacidade de verificar se um usuário possui acesso a um determinado recurso restrito trazendo segurança para sua API.
+O **authentication-app-cs-plugin** adiciona em uma Stack a capacidade de verificar se um usuário possui acesso a um determinado recurso restrito, trazendo segurança para sua API.
 
 ## **Uso**
 
 #### **Pré-requisitos**
-Para utilizar esse plugin é necessário ter uma stack dotnet criada pelo cli do StackSpot que você pode baixar [**aqui**](https://stackspot.com.br/).
+Para utilizar este plugin é necessário ter uma Stack DotNET criada pelo CLI do StackSpot, que você pode baixar [**aqui**](https://stackspot.com.br/).
 
-Ter instalado:
+Também ter instalado:
 - .NET 5 ou 6 
-- O template `rest-app-cs-template` ou o `worker-app-cs-template` já deverá estar aplicado para você conseguir utilizar este plugin.
+- O template **`rest-app-cs-template`** ou o **`worker-app-cs-template`** já deverão estar aplicados para que seja possível utilizar este plugin.
 
 ### **Instalação**
-Para fazer o download do **authentication-app-cs-plugin**, siga os passos abaixo:
+Para fazer o download do **authentication-app-cs-plugin**, siga o seguinte passo:  
 
-**Passo 1.** Copie e cole a URL abaixo no seu navegador/terminal:
+- Copie e cole a seguinte URL no navegador/terminal:
+
 ```
 https://github.com/stack-spot/authentication-app-cs-plugin.git
 ```
